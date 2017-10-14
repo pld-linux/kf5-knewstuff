@@ -1,15 +1,15 @@
-%define         kdeframever     5.24
+%define         kdeframever     5.39
 %define         qtver           5.3.2
 %define         kfname          knewstuff
 
 Summary:	Framework for downloading and sharing additional application data
 Name:		kf5-%{kfname}
-Version:	5.24.0
+Version:	5.39.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	9f91b9149cfc388403642750f20e411f
+# Source0-md5:	71ec279f40f602552b09a52c4d2ed4a6
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= 5.2.0
 BuildRequires:	Qt5DBus-devel >= 5.2.0
@@ -98,15 +98,30 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{kfname}5.lang
 %defattr(644,root,root,755)
 %doc README.md
+/etc/xdg/knewstuff.categories
 %attr(755,root,root) %ghost %{_libdir}/libKF5NewStuff.so.5
 %attr(755,root,root) %{_libdir}/libKF5NewStuff.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libKF5NewStuffCore.so.5
+%attr(755,root,root) %{_libdir}/libKF5NewStuffCore.so.5.*.*
 %{_datadir}/kf5/knewstuff
 %{_datadir}/kf5/kmoretools
+%attr(755,root,root) %{_libdir}/qt5/qml/org/kde/newstuff/libnewstuffqmlplugin.so
+%dir %{_libdir}/qt5/qml/org/kde/newstuff
+%dir %{_libdir}/qt5/qml/org/kde/newstuff/qml
+%{_libdir}/qt5/qml/org/kde/newstuff/qml/NewStuffItem.qml
+%{_libdir}/qt5/qml/org/kde/newstuff/qml/NewStuffList.qml
+%{_libdir}/qt5/qml/org/kde/newstuff/qmldir
 
 %files devel
 %defattr(644,root,root,755)
 %{_includedir}/KF5/KNewStuff3
 %{_includedir}/KF5/knewstuff_version.h
+%{_includedir}/KF5/knewstuffcore_version.h
+%{_includedir}/KF5/knewstuffquick_version.h
 %{_libdir}/cmake/KF5NewStuff
+%{_libdir}/cmake/KF5NewStuffCore
+%{_libdir}/cmake/KF5NewStuffQuick
 %attr(755,root,root) %{_libdir}/libKF5NewStuff.so
+%attr(755,root,root) %{_libdir}/libKF5NewStuffCore.so
 %{qt5dir}/mkspecs/modules/qt_KNewStuff.pri
+%{_libdir}/qt5/mkspecs/modules/qt_KNewStuffCore.pri
