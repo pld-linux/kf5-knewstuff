@@ -5,7 +5,7 @@
 Summary:	Framework for downloading and sharing additional application data
 Name:		kf5-%{kfname}
 Version:	5.39.0
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
@@ -63,6 +63,7 @@ Summary:	Header files for %{kfname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kfname}
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	kf5-kxmlgui-devel >= %{version}
 
 %description devel
 Header files for %{kfname} development.
