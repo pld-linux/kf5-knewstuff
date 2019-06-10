@@ -1,15 +1,15 @@
-%define         kdeframever     5.56
-%define         qtver           5.9.0
-%define         kfname          knewstuff
+%define		kdeframever	5.59
+%define		qtver	5.9.0
+%define		kfname	knewstuff
 
 Summary:	Framework for downloading and sharing additional application data
 Name:		kf5-%{kfname}
-Version:	5.56.0
+Version:	5.59.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	6b7a0aac5699d65f7748dc3fd4215eb1
+# Source0-md5:	251e910ae22b4287aa2ab8a58f2968b0
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= 5.2.0
 BuildRequires:	Qt5DBus-devel >= 5.2.0
@@ -103,7 +103,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libKF5NewStuff.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libKF5NewStuffCore.so.5
 %attr(755,root,root) %{_libdir}/libKF5NewStuffCore.so.5.*.*
-%{_datadir}/kf5/knewstuff
 %{_datadir}/kf5/kmoretools
 %attr(755,root,root) %{_libdir}/qt5/qml/org/kde/newstuff/libnewstuffqmlplugin.so
 %dir %{_libdir}/qt5/qml/org/kde/newstuff
