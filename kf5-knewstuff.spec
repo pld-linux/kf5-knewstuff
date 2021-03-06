@@ -1,15 +1,15 @@
-%define		kdeframever	5.67
+%define		kdeframever	5.79
 %define		qtver	5.9.0
 %define		kfname	knewstuff
 
 Summary:	Framework for downloading and sharing additional application data
 Name:		kf5-%{kfname}
-Version:	5.67.0
+Version:	5.79.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	0033e888f61c2f257e6e6f4a2011a976
+# Source0-md5:	a07e2d9babf366a29656d21e4ee66cf6
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= 5.2.0
 BuildRequires:	Qt5DBus-devel >= 5.2.0
@@ -113,6 +113,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/qt5/qml/org/kde/newstuff/qml/private/*.qml
 %{_libdir}/qt5/qml/org/kde/newstuff/qmldir
 %{_libdir}/qt5/qml/org/kde/newstuff/qml/private/entrygriddelegates/*.qml
+%attr(755,root,root) %{_bindir}/knewstuff-dialog
+%{_datadir}/qlogging-categories5/knewstuff.renamecategories
 
 %files devel
 %defattr(644,root,root,755)
