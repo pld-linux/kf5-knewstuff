@@ -1,15 +1,15 @@
-%define		kdeframever	5.79
+%define		kdeframever	5.80
 %define		qtver	5.9.0
 %define		kfname	knewstuff
 
 Summary:	Framework for downloading and sharing additional application data
 Name:		kf5-%{kfname}
-Version:	5.79.0
+Version:	5.80.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	a07e2d9babf366a29656d21e4ee66cf6
+# Source0-md5:	ce373383c56dd5c20553ea827aa700b6
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= 5.2.0
 BuildRequires:	Qt5DBus-devel >= 5.2.0
@@ -38,6 +38,7 @@ BuildRequires:	kf5-kiconthemes-devel >= %{version}
 BuildRequires:	kf5-kio-devel >= %{version}
 BuildRequires:	kf5-kitemviews-devel >= %{version}
 BuildRequires:	kf5-kjobwidgets-devel >= %{version}
+BuildRequires:	kf5-kpackage-devel >= %{version}
 BuildRequires:	kf5-kservice-devel >= %{version}
 BuildRequires:	kf5-ktextwidgets-devel >= %{version}
 BuildRequires:	kf5-kwidgetsaddons-devel >= %{version}
