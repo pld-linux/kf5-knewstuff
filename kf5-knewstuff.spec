@@ -1,15 +1,15 @@
-%define		kdeframever	5.80
+%define		kdeframever	5.81
 %define		qtver	5.14.0
 %define		kfname	knewstuff
 
 Summary:	Framework for downloading and sharing additional application data
 Name:		kf5-%{kfname}
-Version:	5.80.0
+Version:	5.81.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	ce373383c56dd5c20553ea827aa700b6
+# Source0-md5:	fc92a117fbc73ade53b67d4caddcbeff
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Gui-devel >= %{qtver}
@@ -112,9 +112,9 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{kfname}5.lang
 %defattr(644,root,root,755)
 %doc README.md
-%attr(755,root,root) %ghost %{_libdir}/libKF5NewStuff.so.5
+%ghost %{_libdir}/libKF5NewStuff.so.5
 %attr(755,root,root) %{_libdir}/libKF5NewStuff.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libKF5NewStuffCore.so.5
+%ghost %{_libdir}/libKF5NewStuffCore.so.5
 %attr(755,root,root) %{_libdir}/libKF5NewStuffCore.so.5.*.*
 %{_datadir}/kf5/kmoretools
 %{_datadir}/qlogging-categories5/knewstuff.categories
@@ -139,7 +139,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/cmake/KF5NewStuff
 %{_libdir}/cmake/KF5NewStuffCore
 %{_libdir}/cmake/KF5NewStuffQuick
-%attr(755,root,root) %{_libdir}/libKF5NewStuff.so
-%attr(755,root,root) %{_libdir}/libKF5NewStuffCore.so
+%{_libdir}/libKF5NewStuff.so
+%{_libdir}/libKF5NewStuffCore.so
 %{qt5dir}/mkspecs/modules/qt_KNewStuff.pri
 %{_libdir}/qt5/mkspecs/modules/qt_KNewStuffCore.pri
