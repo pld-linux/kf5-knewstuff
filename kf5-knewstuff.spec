@@ -1,5 +1,5 @@
 %define		kdeframever	5.86
-%define		qtver	5.14.0
+%define		qtver	5.15.2
 %define		kfname	knewstuff
 
 Summary:	Framework for downloading and sharing additional application data
@@ -18,7 +18,7 @@ BuildRequires:	Qt5Quick-devel >= %{qtver}
 BuildRequires:	Qt5Test-devel >= %{qtver}
 BuildRequires:	Qt5Widgets-devel >= %{qtver}
 BuildRequires:	Qt5Xml-devel >= %{qtver}
-BuildRequires:	cmake >= 3.5
+BuildRequires:	cmake >= 3.16
 BuildRequires:	kf5-attica-devel >= %{version}
 BuildRequires:	kf5-extra-cmake-modules >= %{version}
 BuildRequires:	kf5-karchive-devel >= %{version}
@@ -34,6 +34,7 @@ BuildRequires:	kf5-kservice-devel >= %{version}
 BuildRequires:	kf5-ktextwidgets-devel >= %{version}
 BuildRequires:	kf5-kwidgetsaddons-devel >= %{version}
 BuildRequires:	kf5-kxmlgui-devel >= %{version}
+BuildRequires:	kf5-syndication-devel >= %{version}
 BuildRequires:	libstdc++-devel >= 6:5
 BuildRequires:	ninja
 BuildRequires:	rpmbuild(macros) >= 1.736
@@ -75,7 +76,7 @@ Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	Qt5Widgets-devel >= %{qtver}
 Requires:	Qt5Xml-devel >= %{qtver}
-Requires:	cmake >= 3.5
+Requires:	cmake >= 3.16
 Requires:	kf5-attica-devel >= %{version}
 Requires:	kf5-kservice-devel >= %{version}
 Requires:	kf5-kxmlgui-devel >= %{version}
