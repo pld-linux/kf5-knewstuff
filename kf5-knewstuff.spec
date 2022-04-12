@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	5.92
+%define		kdeframever	5.93
 %define		qtver	5.15.2
 %define		kfname	knewstuff
 
 Summary:	Framework for downloading and sharing additional application data
 Name:		kf5-%{kfname}
-Version:	5.92.0
+Version:	5.93.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	eb6db8e37d2a0e54ae6287a3b8506bb2
+# Source0-md5:	8c4fcac72f12bcbbf0d1b98c8b432eea
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Gui-devel >= %{qtver}
@@ -132,13 +132,33 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/qlogging-categories5/knewstuff.categories
 %{_libdir}/qt5/qml/org/kde/newstuff/libnewstuffqmlplugin.so
 %dir %{_libdir}/qt5/qml/org/kde/newstuff
-%dir %{_libdir}/qt5/qml/org/kde/newstuff/qml
-%dir %{_libdir}/qt5/qml/org/kde/newstuff/qml/private
-%dir %{_libdir}/qt5/qml/org/kde/newstuff/qml/private/entrygriddelegates
-%{_libdir}/qt5/qml/org/kde/newstuff/qml/*.qml
-%{_libdir}/qt5/qml/org/kde/newstuff/qml/private/*.qml
+%{_libdir}/qt5/qml/org/kde/newstuff/Action.qml
+%{_libdir}/qt5/qml/org/kde/newstuff/Button.qml
+%{_libdir}/qt5/qml/org/kde/newstuff/Dialog.qml
+%{_libdir}/qt5/qml/org/kde/newstuff/DialogContent.qml
+%{_libdir}/qt5/qml/org/kde/newstuff/DownloadItemsSheet.qml
+%{_libdir}/qt5/qml/org/kde/newstuff/EntryDetails.qml
+%{_libdir}/qt5/qml/org/kde/newstuff/NewStuffItem.qml
+%{_libdir}/qt5/qml/org/kde/newstuff/NewStuffList.qml
+%{_libdir}/qt5/qml/org/kde/newstuff/Page.qml
+%{_libdir}/qt5/qml/org/kde/newstuff/QuestionAsker.qml
+%{_libdir}/qt5/qml/org/kde/newstuff/UploadPage.qml
+%dir %{_libdir}/qt5/qml/org/kde/newstuff/private
+%{_libdir}/qt5/qml/org/kde/newstuff/private/ConditionalLoader.qml
+%{_libdir}/qt5/qml/org/kde/newstuff/private/EntryCommentDelegate.qml
+%{_libdir}/qt5/qml/org/kde/newstuff/private/EntryCommentsPage.qml
+%{_libdir}/qt5/qml/org/kde/newstuff/private/EntryScreenshots.qml
+%{_libdir}/qt5/qml/org/kde/newstuff/private/ErrorDisplayer.qml
+%{_libdir}/qt5/qml/org/kde/newstuff/private/GridTileDelegate.qml
+%{_libdir}/qt5/qml/org/kde/newstuff/private/MessageBoxSheet.qml
+%{_libdir}/qt5/qml/org/kde/newstuff/private/Rating.qml
+%{_libdir}/qt5/qml/org/kde/newstuff/private/Shadow.qml
+%dir %{_libdir}/qt5/qml/org/kde/newstuff/private/entrygriddelegates
+%{_libdir}/qt5/qml/org/kde/newstuff/private/entrygriddelegates/BigPreviewDelegate.qml
+%{_libdir}/qt5/qml/org/kde/newstuff/private/entrygriddelegates/FeedbackOverlay.qml
+%{_libdir}/qt5/qml/org/kde/newstuff/private/entrygriddelegates/ThumbDelegate.qml
+%{_libdir}/qt5/qml/org/kde/newstuff/private/entrygriddelegates/TileDelegate.qml
 %{_libdir}/qt5/qml/org/kde/newstuff/qmldir
-%{_libdir}/qt5/qml/org/kde/newstuff/qml/private/entrygriddelegates/*.qml
 %attr(755,root,root) %{_bindir}/knewstuff-dialog
 %{_datadir}/qlogging-categories5/knewstuff.renamecategories
 
