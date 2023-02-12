@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	5.102
+%define		kdeframever	5.103
 %define		qtver	5.15.2
 %define		kfname	knewstuff
 
 Summary:	Framework for downloading and sharing additional application data
 Name:		kf5-%{kfname}
-Version:	5.102.0
+Version:	5.103.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	89037355539a3d1794d612bad406511d
+# Source0-md5:	1a405c48d435139c9e727bf124e5f038
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Gui-devel >= %{qtver}
@@ -163,6 +163,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/knewstuff-dialog
 %{_datadir}/qlogging-categories5/knewstuff.renamecategories
 %{_libdir}/qt5/plugins/designer/knewstuffwidgets.so
+%{_desktopdir}/org.kde.knewstuff-dialog.desktop
 
 %files devel
 %defattr(644,root,root,755)
